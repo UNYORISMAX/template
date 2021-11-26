@@ -1,4 +1,5 @@
 <?php
+    session_start();
 	
 	include 'koneksi.php';
 
@@ -6,17 +7,22 @@
 
 		$nama = $_POST['nama'];
 		$komen = $_POST['komen'];
+        $msg = $_POST['msg'];
 		
 		$sql = "INSERT INTO template1 (nama, komen)
 		VALUES ('$nama', '$komen')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "";
+            
+            header('location:index.php?posted');
             
         } else {
-            echo "Error: ";
+            header('location:index.php?failed');
         }
 	}
+    else{
+        header("locatuon:index.php");
+    }
 
 ?>
 
@@ -37,6 +43,7 @@
 </head>
 
 <body class="body-main">
+
     <div id="modal-hero" class="modal fade show" role="dialog" tabindex="-1" style="display: block;">
         <div class="modal-dialog modal-fullscreen" role="document">
             <div class="modal-content">
@@ -45,6 +52,21 @@
                     <div class="row hero-wellcome">
                         <div class="col-12"><img src="../template-1/assets/img/Group 130.png" width="320px" /></div>
                         <div class="col-12">
+                        <?php
+                            $msg = "";
+                            if(isset($_GET['posted']))
+                            {
+                                $msg = "kirim";
+                                echo '<div class="alert alert-success">'.$msg.'</div>';
+                            }
+                            
+                            if(isset($_GET['failed']))
+                            {
+                                $msg = "Gagal di kirim";
+                                echo '<div class="alert alert-danger">'.$msg.'</div>';
+                            }
+
+                        ?>
                             <h5 style="font-family: Poppins, sans-serif;color: var(--text);">Undangan Pernikahan</h5>
                             <h1 style="font-family: 'Dancing Script', serif;color: var(--primary);">Andrea &amp; Julia</h1>
                         </div>
@@ -60,6 +82,19 @@
             </div>
         </div>
     </div>
+    <nav class="navbar navbar-dark navbar-expand fixed-bottom">
+    <div class="container-fluid">
+        <div id="navcol-1" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">
+                    <img id="icon" src="../template-1/assets/img/play.png" /></a>
+                    <audio id="mysong">
+                        <source src="../template-1/assets/music/NEFFEX - Grateful [Copyright Free].mp3" type="audio/mpeg">
+                    </source></audio>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <section class="content-intro">
         <div class="container">
@@ -75,15 +110,12 @@
                     <h1 class="heading-time-bottom">1 january 2022</h1>
                 </div>
             </div>
-            <img id="icon" src="../template-1/assets/img/play.png" alt="">
-            <audio  id="mysong" >
-                <source src="../template-1/assets/music/NEFFEX - Grateful [Copyright Free].mp3" type="audio/mp3" onload="">
-            </audio>
         </div>
         <div>
             <img class="footer-image" src="../template-1/assets/img/purana-divider.png">
         </div>
     </section>
+
     <section class="content-couple-info">
         <div class="container-fluid">
             <div class="row">
@@ -135,6 +167,7 @@
             </div>
         </div>
     </section>
+
     <section class="time-warm">
         <div class="container content-count">
             <h1 data-aos="zoom-in" data-aos-duration="1000" class="heading-tittle">Count down event</h1>
@@ -200,12 +233,9 @@
     <section id="guest-book">
         <div class="container guest-container">
             <div class="text-center heading-guest">
-                <h1 class="heading-tittle">Buku Tamu<br /></h1>
-                <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
-                    <strong>Notify :</strong> Pesan ucapan sudah kami terima, makasih
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
+                <h1 class="heading-tittle">Buku Tamu</h1>
             </div>
+            
             <div class="row guest-book-form">
                 <div class="col-sm-12 col-md-6 input-book">
                     <form id="myform" class="input-book" method="POST" name="wpp-template">
@@ -217,9 +247,10 @@
                             <label class="form-label">Masukan Ucapan dan doa terbaik</label>
                             <textarea name="komen" class="form-control commant-guest-input" placeholder="Berikan Ucapan dan doa restu pasangan pengantin" required></textarea>
                         </div>
-                        <div class="text-sm-center text-md-start btn-submit-guest">
+                        <div class="text-center text-md-start div-submit">
                             <button name="post_comment" class="btn btn-link-active" type="submit">kirim</button>
                         </div>
+                        
                     </form>
                 </div>
                 <div class="col output-book">
@@ -233,7 +264,7 @@
                                     <li>
                                     <?php
     
-                                            $sql = "SELECT * FROM template2";
+                                            $sql = "SELECT * FROM template1 ORDER BY date DESC";
                                             $result = $conn->query($sql);
 
                                             if ($result->num_rows > 0) {
@@ -243,7 +274,7 @@
                                         ?>
                                         <div class="list-komen">
                                             <h4 class="guest-name"><?php echo $row['nama']; ?></h4>
-                                            <p><?php echo $row['komen']; ?></p>
+                                            <p><?php echo $row['date']; ?> - <?php echo $row['komen']; ?></p>
                                         </div>
                                         <?php }} 
                                         ?>
@@ -271,10 +302,6 @@
     document.onreadystatechange = function () {
     myModal.show();
     };
-    if(window.history.replaceState)
-    {
-        window.history.replaceState(null, null, window.location.href)
-    }
 </script>
 </body>
 </html>
