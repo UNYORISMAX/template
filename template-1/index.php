@@ -82,17 +82,19 @@
             </div>
         </div>
     </div>
+
     <nav class="navbar navbar-dark navbar-expand fixed-bottom">
-    <div class="container-fluid">
-        <div id="navcol-1" class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#">
-                    <img id="icon" src="../template-1/assets/img/play.png" /></a>
-                    <audio id="mysong">
-                        <source src="../template-1/assets/music/NEFFEX - Grateful [Copyright Free].mp3" type="audio/mpeg">
-                    </source></audio>
-                </li>
-            </ul>
+        <div class="container-fluid">
+            <div id="navcol-1" class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link">
+                        <img id="icon" src="../template-1/assets/img/play.png" /></a>
+                        <audio id="mysong">
+                            <source src="../template-1/assets/music/NEFFEX - Grateful [Copyright Free].mp3" type="audio/mpeg">
+                        </source></audio>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
