@@ -1,0 +1,271 @@
+:root {
+  --font-heading-big: 60px;
+  --font-heading-1: 35px;
+  --font-heading-2: 20px;
+  --font-text: 12px;
+  --font-style-main: 'great vibes';
+  --font-style-2nd: 'roboto', sans-serif;
+  --main-color: #4b4a16;
+  --2nd-color: #F5DEB3;
+  --3nd-color: #ffff;
+  --text-color: #000;
+}
+
+body {
+  height: 100vh;
+}
+
+.btn-active-main {
+  color: var(--3nd-color);
+  background: var(--main-color);
+  text-align: center;
+  text-transform: capitalize;
+  border-style: none;
+}
+
+.btn-active-main:hover {
+  color: var(--main-color);
+  background: var(--3nd-color);
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+  border-style: solid;
+  border-color: var(--main-color);
+}
+
+.main-heading {
+  font-family: var(--font-style-main);
+  font-size: var(--font-heading-2);
+  color: var(--3nd-color);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.2nd-heading {
+  font-family: var(--font-style-main);
+  font-size: var(--font-heading-2);
+  color: var(--main-color);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.main-heading-tittle {
+  font-family: var(--font-style-2nd);
+  font-size: var(--font-heading-2);
+  color: var(--3nd-color);
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-img {
+  margin-top: 20px;
+}
+
+/* intro section */
+
+.intro-section {
+  background: linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url("../../assets/img/wellcome.png") center / cover no-repeat;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.intro-name-couple {
+  background: url("../../assets/img/dan-putih.png") center / 100px no-repeat;
+  font-family: var(--font-style-main);
+  color: var(--3nd-color);
+}
+
+.detail-intro-cover {
+  font-size: var(--font-heading-1);
+  font-family: var(--font-main);
+  color: var(--3nd-color);
+  text-align: center;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.intro-name-couple {
+  text-align: center;
+  font-family: var(--font-style-main);
+  font-size: var(--font-heading-big);
+  color: var(--3nd-color);
+}
+
+.detail-acara {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.with-line {
+  border-top-style: solid;
+  border-top-color: var(--3nd-color);
+  border-bottom-style: solid;
+  border-bottom-color: var(--3nd-color);
+  color: var(--3nd-color);
+  text-align: center;
+  font-size: var(--font-heading-2);
+}
+
+.without-line {
+  text-align: center;
+  color: var(--3nd-color);
+  font-size: var(--font-heading-2);
+}
+
+/* section intro-profile */
+
+.intro-profile {
+  padding-top: 10%;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  height: initial;
+}
+
+.hero-heading {
+  font-size: var(--font-heading-1);
+  color: var(--main-color);
+  font-family: var(--font-style-main);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.hero-subheading {
+  font-size: var(--font-heading-2);
+  color: var(--main-color);
+  font-family: var(--font-style-2nd);
+  margin-top: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.hero-paragraph {
+  font-size: var(--font-text);
+  font-family: var(--font-style-2nd);
+  color: var(--main-color);
+}
+
+.hero-profile {
+  margin-top: 30px;
+}
+
+.footer-colum {
+  margin-top: 20px;
+}
+
+/* event-section */
+
+.event-section {
+  padding-top: 10%;
+  margin-bottom: 50px;
+  height: initial;
+}
+
+.date-event {
+  margin-top: 40px;
+  color: var(--main-color);
+}
+
+.hero-data {
+  font-family: var(--font-style-2nd);
+  font-size: var(--font-heading-1);
+  text-align: center;
+}
+
+.div-hero {
+  background: rgba(255,255,255,0.8);
+  padding: 21px;
+  border-radius: 10px;
+}
+
+.footer-kuotes {
+  width: 70%;
+  height: 40vh;
+  position: relative;
+  margin-top: 40px;
+  padding: 30px;
+}
+
+/* Pengingat Acara */
+
+.countdown {
+  margin: 40px;
+  margin-top: 40px;
+  padding: 40px;
+}
+
+.event-section {
+  padding-top: 10%;
+  margin-bottom: 50px;
+  height: initial;
+}
+
+.hero-timer {
+  text-align: center;
+  color: var(--main-color);
+  border-right-width: 3px;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-bottom-color: var(--main-color);
+}
+
+/* guest-book */
+
+.form-label.form-label {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.form-label {
+  color: var(--main-color);
+}
+
+.form-control.input-guest-nama {
+  border-bottom-color: var(--main-color);
+}
+
+.form-control.input-guest-komen {
+  border-bottom-color: var(--main-color);
+}
+
+.guest-book {
+  padding-top: 10%;
+  margin-bottom: 50px;
+  height: initial;
+}
+
+.guest-name {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.header-card {
+  background: var(--main-color);
+  color: var(--3nd-color);
+  font-family: 'Roboto';
+}
+
+.card-body{
+  height: 230px;
+  overflow-y: scroll;
+  overflow-x: hidden ;
+}
+
+
+ul {
+  list-style: none;
+}
+
+.icon-social {
+  font-size: 30px;
+  color: var(--text-color);
+}
+
+.icon-social:hover {
+  font-size: 35px;
+  color: var(--text-color);
+}
+

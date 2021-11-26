@@ -1,0 +1,296 @@
+<?php
+	
+	include 'koneksi.php';
+
+	if (isset($_POST['post_comment'])) {
+
+		$nama = $_POST['nama'];
+		$komen = $_POST['komen'];
+		
+		$sql = "INSERT INTO template2 (nama, komen)
+		VALUES ('$nama', '$komen')";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "";
+            
+        } else {
+            echo "Error: ";
+        }
+	}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Light Flower</title>
+</head>
+
+<body>
+    <!-- modal start -->
+    <div id="modal-hero" class="modal fade" role="dialog" tabindex="-1" >
+        <div class="modal-dialog modal-fullscreen" role="document">
+            <div class="modal-content">
+                <div class="modal-body intro-section">
+                    <div class="container floot-intro">
+                        <div class="row">
+                            <div class="col-12 main-heading-tittle" data-aos="zoom-in" data-aos-duration="1000"><span >Wedding of</span></div>
+                            <div class="col-12 name-info-intro" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="intro-name-couple">
+                                    <h1 class="male mb-5">Andrea</h1>
+                                    <h1 class="female">Julia</h1>
+                                </div>
+                            </div>
+                            <div class="col detail-acara" data-aos="fade-up" data-aos-duration="2000">
+                                <div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <h1 class="with-line">Jumat</h1>
+                                        </div>
+                                        <div class="col">
+                                            <h1 class="without-line">01</h1>
+                                        </div>
+                                        <div class="col">
+                                            <h1 class="with-line">Januari</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12" data-aos="fade-up" data-aos-duration="2000">
+                                <h1 class="without-line">2022</h1>
+                            </div>
+                            <div class="col-12 mt-5" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
+                                <div class="row">
+                                    <div class="col text-center"><button class="btn btn-active-main" type="button" data-bs-dismiss="modal">buka undangan&nbsp;&nbsp;<i class="fas fa-book-open"></i></button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal -->
+
+    <section class="intro-profile">
+        <div class="container-fluid" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="2000">
+            <div class="row text-center">
+                <div class="col-sm-12 col-md-8 offset-md-2" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
+                    <h4 class="hero-subheading">The best and most beautiful things in this world cannot be seen or even heard, but must be felt with the heart.</h4>
+                </div>
+                <div class="col-sm-12 col-md-4 offset-md-2 hero-profile" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+                    <div class="header-profile"><img src="assets/img/male.png" width="300px"></div>
+                    <div class="deskripsi-profile">
+                        <h1 class="hero-heading">Andrea Heroscout</h1>
+                        <p class="hero-paragraph">anak pertama pasangan<br>Genta Heroscout &amp; Kimi Heroscout</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 hero-profile">
+                    <div class="header-profile" data-aos="zoom-in" data-aos-duration="1000"><img src="assets/img/female.png" width="300px"></div>
+                    <div class="deskripsi-profile" data-aos="zoom-in" data-aos-duration="1000">
+                        <h1 class="hero-heading">Arabelle Julia </h1>
+                        <p class="hero-paragraph">anak kedua pasangan<br>Haushine Lee &amp; Bimala Lee</p>
+                    </div>
+                </div>
+                <div class="col-12 footer-colum"><img class="footer-img" src="assets/img/footer-img.png"></div>
+            </div>
+        </div>
+    </section>
+    <section class="event-section" style="background: url(&quot;assets/img/background-active.jpg&quot;) center / 120px;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col header-event" data-aos="fade-up" data-aos-duration="1000">
+                    <h1 class="hero-heading">Om Swastyastu</h1>
+                </div>
+                <div class="col-sm-12 col-md-10 offset-md-1 header-event" data-aos="fade-up" data-aos-duration="1000">
+                    <h1 class="hero-subheading">Atas Asung Kerta Wara Nugraha Ida Sang Hyang Widhi Wasa/Tuhan Yang Maha Esa, kami bermaksud mengundang Bapak/Ibu/Saudara/i, pada Acara Pawiwahan (Pernikahan) kami, yang akan dilaksanakan pada:</h1>
+                </div>
+                <div class="col-10 offset-1 date-event" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="div-hero">
+                        <h1 class="hero-subheading">Detail tempat dan lokasi :</h1>
+                        <div class="row mt-4" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="col-sm-12 col-md-4 hero-data"><i class="far fa-calendar-alt"></i>
+                                <h1 class="hero-subheading">sabtu, 1 januari 2022</h1>
+                            </div>
+                            <div class="col-sm-12 col-md-4 hero-data"><i class="far fa-clock"></i>
+                                <h1 class="hero-subheading">07.00 - 20.00 WITA</h1>
+                            </div>
+                            <div class="col-sm-12 col-md-4 hero-data"><i class="fas fa-map-marker-alt"></i>
+                                <h1 class="hero-subheading">Jl. Raya Padang Sambian, No.14</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-10 offset-md-1 header-event" data-aos="fade-up" data-aos-duration="1000">
+                    <h1 class="hero-subheading">Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir untuk memberikan doa restu kepada kami.<br><br>Atas kehadiran dan doa restunya kami ucapkan terimakasih.</h1>
+                </div>
+                <div class="col-12 header-event" data-aos="fade-up" data-aos-duration="1000">
+                    <h1 class="hero-heading">Om Shanti Shanti Shanti Om</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid text-center footer-kuotes" style="background: var(--2nd-color);" data-aos="zoom-in" data-aos-duration="1000">
+            <h1 class="hero-heading" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1000">Memoriable</h1>
+            <p class="hero-paragraph" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1000">"Things that are remarkable and worthy of remembrance"</p>
+            <img data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1000" class="footer-img" src="assets/img/footer-img.png">
+        </div>
+    </section>
+    <section class="pengingat-acara">
+        <div class="container" data-aos="zoom-in" data-aos-duration="1000">
+            <h1 class="hero-heading">Pengingat Acara</h1>
+            <div class="row justify-content-center countdown">
+                <div class="col-md-2 hero-timer" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+                    <h1 id="Days">00 d</h1>
+                    <p>Hari</p>
+                </div>
+                <div class="col-md-2 hero-timer" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+                    <h1 id="Hours">00 h</h1>
+                    <p>Jam</p>
+                </div>
+                <div class="col-md-2 hero-timer" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+                    <h1 id="Minutes">00 m</h1>
+                    <p>Menit</p>
+                </div>
+                <div class="col-md-2 hero-timer" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+                    <h1 id="Seconds">00 s</h1>
+                    <p>Detik</p>
+                </div>
+                <div class="col-12" style="text-align: center;margin-top: 40px;" data-aos="zoom-out" data-aos-duration="1000">
+                    <button class="btn btn-active-main" type="button">Tambahkan Pengingat&nbsp;&nbsp;<i class="far fa-calendar-plus"></i></button>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col hero-heading" data-aos="zoom-in" data-aos-duration="1000">
+                    <h1>Google Mpas</h1>
+                </div>
+                <div class="col-10 offset-1 mt-5" data-aos="zoom-in" data-aos-duration="1000">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.322195299445!2d115.17914911475438!3d-8.66087619377673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd24757a722a9bb%3A0x1dbbbed7f8f1cf3e!2sJl.%20Tangkuban%20Perahu%2C%20Padangsambian%2C%20Kec.%20Denpasar%20Bar.%2C%20Kota%20Denpasar%2C%20Bali!5e0!3m2!1sid!2sid!4v1637207867543!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
+                </div>
+                <div class="col-12 mt-5" data-aos="zoom-in" data-aos-duration="1000">
+                    <a class="btn btn-active-main" href="https://goo.gl/maps/aeR6SFSEKeKRUPX79" role="link">buka peta&nbsp; &nbsp;<i class="fas fa-map-marked-alt"></i></a>
+                </div>
+                <div class="col" data-aos="zoom-in" data-aos-duration="1000"><img class="footer-img" src="assets/img/footer-img.png"></div>
+            </div>
+        </div>
+        <div class="container-fluid text-center footer-kuotes" style="background: var(--2nd-color);">
+            <h1 class="hero-heading">Navigation</h1>
+            <p class="hero-paragraph">"Sweet dream kind have sure ways dan need some navigation"</p><img class="footer-img" src="assets/img/footer-img.png">
+        </div>
+    </section>
+    <section class="photo-gallery">
+        <div class="container">
+            <div class="intro" data-aos="zoom-in" data-aos-duration="1000">
+                <h2 class="text-center hero-heading mt-5">Gallery</h2>
+                <p class="text-center">Kenangan yang indah akan dibuat menjadi kenangan yang tidak terlupakan dalam bentu foto galery</p>
+            </div>
+            <div class="row photos" data-bss-baguettebox="">
+                <div class="col-sm-6 col-md-3 item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000"><a href="assets/img/desk.jpg"><img class="img-fluid" src="assets/img/desk.jpg"></a></div>
+                <div class="col-sm-6 col-md-3 item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000"><a href="assets/img/building.jpg"><img class="img-fluid" src="assets/img/building.jpg"></a></div>
+                <div class="col-sm-6 col-md-3 item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000"><a href="assets/img/building.jpg"><img class="img-fluid" src="assets/img/building.jpg"></a></div>
+                <div class="col-sm-6 col-md-3 item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000"><a href="assets/img/building.jpg"><img class="img-fluid" src="assets/img/building.jpg"></a></div>
+                <div class="col-sm-6 col-md-3 item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000"><a href="assets/img/building.jpg"><img class="img-fluid" src="assets/img/building.jpg"></a></div>
+                <div class="col-sm-6 col-md-3 item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000"><a href="assets/img/building.jpg"><img class="img-fluid" src="assets/img/building.jpg"></a></div>
+                <div class="col-sm-6 col-md-3 item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000"><a href="assets/img/building.jpg"><img class="img-fluid" src="assets/img/building.jpg"></a></div>
+                <div class="col-sm-6 col-md-3 item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000"><a href="assets/img/building.jpg"><img class="img-fluid" src="assets/img/building.jpg"></a></div>
+                <div class="col-sm-6 col-md-3 item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000"><a href="assets/img/loft.jpg"><img class="img-fluid" src="assets/img/loft.jpg"></a></div>
+                <div class="col-sm-6 col-md-3 item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000"><a href="assets/img/loft.jpg"><img class="img-fluid" src="assets/img/loft.jpg"></a></div>
+                <div class="col-sm-6 col-md-3 item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000"><a href="assets/img/building.jpg"><img class="img-fluid" src="assets/img/building.jpg"></a></div>
+                <div class="col-sm-6 col-md-3 item" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000"><a href="assets/img/building.jpg"><img class="img-fluid" src="assets/img/building.jpg"></a></div>
+            </div>
+        </div>
+    </section>
+    <section class="guest-book">
+        <div class="container" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="row guest-book-form">
+                <div class="col-12 book-tittle mb-5">
+                    <h1 class="hero-heading">Buku Tamu Undangan</h1>
+                </div>
+                <div class="col-sm-12 col-md-6 input-book mt-sm-5">
+                    <form class="input-book" method="POST">
+                        <div class="name-guest-form form"  data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+                            <label class="form-label">Nama</label>
+                            <input name="nama" class="form-control input-guest-nama" type="text" placeholder="Masukan Nama Anda Disini" required/>
+                        </div>
+                        <div class="commant-guest-form"  data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+                            <label class="form-label">Ucapan dan doa</label>
+                            <textarea name="komen" class="form-control input-guest-komen" placeholder="Berikan Ucapan dan doa restu pasangan pengantin" required></textarea>
+                        </div>
+                        <div class="text-center div-submit" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
+                            <button name="post_comment" class="btn btn-active-main mt-3 mb-3" type="submit">kirim</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-12 col-md-6 output-book mt-sm-5" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+                    <div class="guest-list">
+                        <div class="card output-daftar-komen">
+                            <div class="card-header header-card" >
+                                <div class="text-capitalize text-center">
+                                    <h4 style="color: var(--text);">Daftar ucapan dari undangan</h4>
+                                </div>
+                            </div>
+                            <div class="card-body output-daftar-komen" >
+                                <ul>
+                                <?php
+                                    $sql = "SELECT * FROM template2";
+                                    $result = $conn->query($sql);
+
+                                    if ($result->num_rows > 0) {
+                                    // output data of each row
+                                    while($row = $result->fetch_assoc()) {
+                                    ?>
+                                    <li class="guest-name"><?php echo $row['nama']; ?></li>
+                                    <li class="output-daftar-komen"><?php echo $row['komen']; ?></li>
+                                <?php 
+                                    }} 
+                                ?>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col text-center footer-colum"><img class="footer-img" src="assets/img/footer-img.png"></div>
+            </div>
+        </div>
+        <div class="container-fluid text-center footer-kuotes" style="background: var(--2nd-color);">
+            <h6 style="border-bottom-width: 1px;border-bottom-style: solid;">HERO-TIME</h6>
+            <p>menerima jasa pembuatan website online responsive design dan murah</p>
+            <h6 style="border-bottom: 1px solid var(--text-color) ;">contact us</h6>
+            <div class="row" style="margin-top: 20px;">
+                <div class="col"><a class="icon-social" href="#"><i class="fab fa-instagram icon-social"></i></a></div>
+                <div class="col"><a class="icon-social" href="#"><i class="fab fa-facebook"></i></a></div>
+                <div class="col"><a class="icon-social" href="#"><i class="fas fa-phone-alt icon-social"></i></a></div>
+                <div class="col"><a class="icon-social" href="#"><i class="fab fa-whatsapp icon-social"></i></a></div>
+            </div>
+        </div>
+    </section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="assets/js/Lightbox-Gallery.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+    AOS.init();
+    var myModal = new bootstrap.Modal(document.getElementById("modal-hero"), {});
+
+    document.onreadystatechange = function () {
+    myModal.show();
+    };
+    if(window.history.replaceState)
+    {
+        window.history.replaceState(null, null, window.location.href)
+    }
+</script>   
+</body>
+
+</html>
