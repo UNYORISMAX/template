@@ -1,0 +1,311 @@
+/* Page Setting */
+div .container {
+  height: 100%;
+}
+
+.heading-tittle {
+  color: var(--primary);
+  font-family: 'Dancing Script';
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+:root {
+  --primary: #dcb276;
+  --text: #ffff;
+}
+
+.footer-image {
+  width: 20%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+/* End Page Setting */
+
+/* Page Section Intro Pengantin */
+.content-intro {
+  font-family: 'Poppins';
+  font-weight: normal;
+  font-size: 25px;
+  color: var(--text);
+  text-align: center;
+  text-transform: capitalize;
+  background: linear-gradient(0deg, black, rgba(255,255,255,0)), url("../../assets/img/slider%202.jpeg") center / cover no-repeat;
+  height: 1000px;
+  padding-top: 150px;
+}
+
+.colum-text-intro {
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Dancing Script';
+  color: var(--primary);
+  background: url("../../assets/img/dan-putih.png") center / 120px no-repeat;
+}
+/* End content */
+
+/* acc content intro */
+.heading-time-top {
+  font-family: optima;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.heading-time-top::before {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 2px;
+  background: var(--primary);
+  left: 5px;
+  top: 150px;
+  position: absolute;
+}
+
+.heading-time-top::after {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 2px;
+  background: var(--primary);
+  right: 5px;
+  top: 150px;
+  position: absolute;
+}
+/* End acc top */
+
+/* acc content intro bottom */
+.heading-time-bottom {
+  font-family: optima;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.heading-time-bottom::before {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 2px;
+  background: var(--primary);
+  right: 0;
+  top: 370px;
+  position: absolute;
+}
+
+.heading-time-bottom::after {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 2px;
+  background: var(--primary);
+  left: 0;
+  top: 370px;
+  position: absolute;
+}
+/* End acc content intro bottom */
+
+
+/* Page content-couple-info */
+.content-couple-info {
+  background: linear-gradient(180deg, rgb(0,0,0), rgba(0,0,0,0)), url("../../assets/img/background-active.jpg") center / 120px repeat;
+  padding-top: 50px;
+  height: 100%;
+}
+
+.img-couple-profile {
+  border-radius: 200px;
+  border: 10.4px solid #dcb276;
+}
+
+.couple-info {
+  font-family: 'Dancing Script';
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 35px;
+  margin-top: 30px;
+}
+
+.couple-info-text {
+  margin-top: 10px;
+  font-family: 'Poppins';
+  color: var(--text);
+  font-size: 20px;
+}
+
+/* End Section */
+
+/* navbar style */
+
+i {
+  color: var(--primary);
+  font-size: 30px;
+}
+
+.text-icon {
+  color: var(--primary);
+  font-size: 20px;
+}
+
+/* End Navbar Style */
+
+/* Page Section Event */
+
+.content-event-wedding {
+  background: linear-gradient(0deg, black, rgba(255,255,255,0)), url("../../assets/img/background-active.jpg") center / 120px repeat;
+  text-align: center;
+  height: 100%;
+  font-family: 'popins';
+}
+
+.content-event-wedding p {
+  text-align: center;
+  font-family: 'Popins';
+  font-size: 20px;
+  color: var(--text);
+}
+
+.heading-event-hero {
+  font-size: 40px;
+  color: var(--primary);
+  text-align: center;
+}
+
+.col-list-event p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  color: var(--primary);
+}
+
+.col-list-event i {
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+/* End Conten Event */
+
+/* Content Count down */
+
+.time-warm {
+  background: linear-gradient(180deg, black, rgba(255,255,255,0)), url("../../assets/img/background-active.jpg") center / 120px repeat;
+  text-align: center;
+  height: 100%;
+  font-family: 'popins';
+  color: var(--primary);
+}
+
+.count-list {
+  font-size: 20px;
+  padding-top: 20px;
+  border-style: solid;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.btn-link-active {
+  background: var(--primary);
+  color: var(--text);
+  width: 250px;
+  height: 40px;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.btn-link-active:hover {
+  width: 250px;
+  height: 40px;
+  text-transform: capitalize;
+  background: var(--text);
+  color: var(--primary);
+}
+
+/* End Section */
+
+/* Content Galery-image */
+
+.content-galery-image {
+  background: linear-gradient(0deg, black, rgba(255,255,255,0)), url("../../assets/img/background-active.jpg") center / 120px repeat;
+  text-align: center;
+  height: 100%;
+  font-family: 'popins';
+  color: var(--primary);
+  padding-bottom: 50px;
+}
+/* End Content */
+
+/* content guest book */
+
+#guest-book {
+  background: linear-gradient(180deg, black, rgba(255,255,255,0)), url("../../assets/img/background-active.jpg") center / 120px repeat;
+  height: 100%;
+}
+
+.col-sm-12.col-md-6.input-book {
+  margin-bottom: 40px;
+}
+
+.guest-container {
+  padding-top: 40px;
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+.heading-guest {
+  padding-bottom: 50px;
+  padding-top: 30px;
+}
+
+.input-book {
+  font-size: 15px;
+  font-family: 'Poppins';
+  color: var(--primary);
+}
+
+.form-control.commant-guest-input {
+  height: 100px;
+}
+
+.input-book div {
+  margin-bottom: 20px;
+}
+
+input[type="text"], textarea {
+  outline: none;
+  box-shadow: none !important;
+  border: 3px solid #dcb276 !important;
+  text-transform: capitalize;
+}
+
+.btn-submit-guest {
+  margin-top: 20px;
+}
+
+.card-body.output-daftar-komen {
+  height: 100%;
+}
+
+.card.output-daftar-komen {
+  height: 300px;
+}
+
+.card-body.output-daftar-komen {
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+.guest-name {
+  text-transform: capitalize;
+  text-align: left;
+}
