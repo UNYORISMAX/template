@@ -11,11 +11,15 @@
 		VALUES ('$nama', '$komen')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "";
+            
+            header('location:index.php?posted');
             
         } else {
-            echo "Error: ";
+            header('location:index.php?failed');
         }
+	}
+    else{
+        header("locatuon:index.php");
 	}
 
 ?>
@@ -70,8 +74,27 @@
                                 <h1 class="without-line">2022</h1>
                             </div>
                             <div class="col-12 mt-5" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000">
+                                
                                 <div class="row">
-                                    <div class="col text-center"><button class="btn btn-active-main" type="button" data-bs-dismiss="modal">buka undangan&nbsp;&nbsp;<i class="fas fa-book-open"></i></button></div>
+                                    <div class="col-6 offset-3 text-center" >
+                                    <?php
+                                        $msg = "";
+                                        if(isset($_GET['posted']))
+                                        {
+                                            $msg = "Pesan mu sudah kami kirim";
+                                            echo '<div class="alert alert-success">'.$msg.'</div>';
+                                        }
+                                        
+                                        if(isset($_GET['failed']))
+                                        {
+                                            $msg = "Maaf, Pesan mu gagal kami kirim";
+                                            echo '<div class="alert alert-danger">'.$msg.'</div>';
+                                        }
+
+                                ?>
+                                    </div>
+                                    <div class="col-12 text-center"><button class="btn btn-active-main" type="button" data-bs-dismiss="modal">buka undangan&nbsp;&nbsp;<i class="fas fa-book-open"></i></button></div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -241,14 +264,14 @@
                             <div class="card-body output-daftar-komen" >
                                 <ul>
                                 <?php
-                                    $sql = "SELECT * FROM template2";
+                                    $sql = "SELECT * FROM template2  ORDER BY date DESC";
                                     $result = $conn->query($sql);
 
                                     if ($result->num_rows > 0) {
                                     // output data of each row
                                     while($row = $result->fetch_assoc()) {
                                     ?>
-                                    <li class="guest-name"><?php echo $row['nama']; ?></li>
+                                    <li class="guest-name"><?php echo $row['nama']; ?> - <?php echo $row['date']; ?></li>
                                     <li class="output-daftar-komen"><?php echo $row['komen']; ?></li>
                                 <?php 
                                     }} 
@@ -286,10 +309,6 @@
     document.onreadystatechange = function () {
     myModal.show();
     };
-    if(window.history.replaceState)
-    {
-        window.history.replaceState(null, null, window.location.href)
-    }
 </script>   
 </body>
 

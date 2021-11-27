@@ -40,14 +40,14 @@ body {
   text-align: center;
   text-transform: capitalize;
 }
-
+/* 
 .2nd-heading {
   font-family: var(--font-style-main);
   font-size: var(--font-heading-2);
   color: var(--main-color);
   text-align: center;
   text-transform: capitalize;
-}
+} */
 
 .main-heading-tittle {
   font-family: var(--font-style-2nd);
@@ -253,7 +253,6 @@ body {
   overflow-y: scroll;
   overflow-x: hidden ;
 }
-
 
 ul {
   list-style: none;

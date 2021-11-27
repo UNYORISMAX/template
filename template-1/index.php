@@ -52,21 +52,24 @@
                     <div class="row hero-wellcome">
                         <div class="col-12"><img src="../template-1/assets/img/Group 130.png" width="320px" /></div>
                         <div class="col-12">
-                        <?php
+                            <div class="col-6 offset-3 text-center">
+                            <?php
                             $msg = "";
                             if(isset($_GET['posted']))
                             {
-                                $msg = "kirim";
+                                $msg = "Pesan mu sudah kami kirim";
                                 echo '<div class="alert alert-success">'.$msg.'</div>';
                             }
                             
                             if(isset($_GET['failed']))
                             {
-                                $msg = "Gagal di kirim";
+                                $msg = "Maaf, Pesan mu gagal kami kirim";
                                 echo '<div class="alert alert-danger">'.$msg.'</div>';
                             }
 
                         ?>
+                            </div>
+                        
                             <h5 style="font-family: Poppins, sans-serif;color: var(--text);">Undangan Pernikahan</h5>
                             <h1 style="font-family: 'Dancing Script', serif;color: var(--primary);">Andrea &amp; Julia</h1>
                         </div>
@@ -82,19 +85,17 @@
             </div>
         </div>
     </div>
-
     <nav class="navbar navbar-dark navbar-expand fixed-bottom">
-        <div class="container-fluid">
-            <div id="navcol-1" class="collapse navbar-collapse">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link">
-                        <img id="icon" src="../template-1/assets/img/play.png" /></a>
-                        <audio id="mysong">
-                            <source src="../template-1/assets/music/NEFFEX - Grateful [Copyright Free].mp3" type="audio/mpeg">
-                        </source></audio>
-                    </li>
-                </ul>
-            </div>
+    <div class="container-fluid">
+        <div id="navcol-1" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link">
+                    <img id="icon" src="../template-1/assets/img/play.png" /></a>
+                    <audio id="mysong">
+                        <source src="../template-1/assets/music/NEFFEX - Grateful [Copyright Free].mp3" type="audio/mpeg"></source>
+                    </audio>
+                </li>
+            </ul>
         </div>
     </nav>
 
